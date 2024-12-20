@@ -1,0 +1,15 @@
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        
+        if n==1:
+            return True
+        elif n==4:
+            return False
+        else:
+            hap=0
+            while(n!=0):
+                 rem=n%10
+            
+                 hap=(rem**2)+hap
+                 n=n//10
+            return self.isHappy(hap)
