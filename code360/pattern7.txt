@@ -1,0 +1,10 @@
+def nStarTriangle(n: int) -> None:
+    odd=1
+    for i in range(1,n+1):
+        for k in range(i,n):
+            print(" ",end='')
+        for j in range(1,odd+1):
+            print("*",end='')
+        print()
+        odd+=2
+    pass
