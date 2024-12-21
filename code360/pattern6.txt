@@ -1,0 +1,8 @@
+def nNumberTriangle(n: int) -> None:
+    odd=n
+    for i in range(1,n+1):
+        for j in range(1,odd+1):
+            print(j,end=' ')
+        print()
+        odd-=1
+    pass
