@@ -1,0 +1,7 @@
+def nLetterTriangle(n: int) -> None:
+    l=['A',"B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q",'R','S','T','U','V','X','Y','Z']
+    for i in range(1,n+1):
+        for j in range(i):
+            print(l[j],end=' ')
+        print()
+    pass
