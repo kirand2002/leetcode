@@ -1,0 +1,14 @@
+def getNumberPattern(n: int) -> None:
+    
+    # Write your solution here.
+    for i in range(1,2*n):  # Loop for rows
+        top = i - 1
+        bottom = 2*n -1 -i
+        for j in range(1,2*n):  # Loop for columns
+            left = j - 1
+            right = 2*n-1 - j
+            print(n - min(min(top,bottom),min(left,right)),end="")
+        print()
+    pass
+
+    
