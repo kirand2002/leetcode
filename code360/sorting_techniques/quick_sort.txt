@@ -1,0 +1,26 @@
+arr=list(input())
+n=len(arr)
+def partion(arr,low,high):
+    p=arr[low]
+    start=low+1
+    end=high
+    while True:
+        while start<=end and arr[start]<=p:
+            start+=1
+        while start<=end and arr[end]>=p:
+            end-=1
+        if start <= end:
+            arr[start],arr[end]=arr[end],arr[start]
+
+        else:
+            break
+    arr[low],arr[end]=arr[end],arr[low]
+    return end
+def quicksort(arr,low,high):
+    if low<high:
+        pivot=partion(arr,low,high)
+        quicksort(arr,low,pivot-1)
+        quicksort(arr,pivot+1,high)
+    return arr
+b=quicksort(arr,0,n-1)
+print(b)
