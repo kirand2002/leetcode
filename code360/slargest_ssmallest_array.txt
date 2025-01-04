@@ -1,0 +1,19 @@
+def getSecondOrderElements(n: int,  a: [int]) -> [int]:
+    largest=a[0]
+    slargest=-1
+    for i in range(1,n):
+        if a[i]>largest:
+            slargest=largest
+            largest=a[i]
+        elif a[i]>slargest and a[i]!=largest:
+            slargest=a[i]
+    smallest=a[0]
+    ssmallest=10**9
+    for i in range(1,n):
+        if a[i]<smallest:
+            ssmallest=smallest
+            smallest=a[i]
+        elif a[i]<ssmallest and a[i]!=smallest:
+            ssmallest=a[i]
+    return slargest,ssmallest
+    pass
