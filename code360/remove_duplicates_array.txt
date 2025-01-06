@@ -1,0 +1,15 @@
+def removeDuplicates(arr,n):
+    a=set()
+    for i in range(n):
+        a.add(arr[i])
+
+    
+    
+    count=0
+    for i in range(len(a)):
+        
+        count+=1
+    arr=list(a)
+
+    return count,arr
+    pass
