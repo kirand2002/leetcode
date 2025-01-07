@@ -1,0 +1,3 @@
+length1,width1=map(int,input().split())
+area=length1*width1
+print(area)
