@@ -1,0 +1,17 @@
+def pow(n):
+    count = 0
+    while n > 0:
+        count += 1
+        n = n // 10
+    return count
+
+
+def checkArmstrong(n):
+    temp = n
+    arm = 0
+    pow1 = pow(n)
+    while n > 0:
+        rem = n % 10
+        arm = (rem ** pow1) + arm
+        n = n // 10
+    return temp==arm
