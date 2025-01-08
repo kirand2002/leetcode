@@ -1,0 +1,10 @@
+a="kirank"
+n=len(a)
+charecter=input()
+def count1(a,n,charecter):
+    count = 0
+    for i in range(n):
+        if a[i]==charecter:
+            count+=1
+    return count
+print(count1(a,n,charecter))
