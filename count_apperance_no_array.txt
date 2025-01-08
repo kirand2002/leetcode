@@ -1,0 +1,19 @@
+n=int(input())
+arr=[1,2,3,4,5,6,1,2,3,4]
+count=0
+for i in range(len(arr)):
+    if arr[i]==n:
+        count+=1
+print(count)
+
+#-----------or
+n1=len(arr)
+def accrr(n,arr,n1):
+    i=0
+    count=0
+    while(i<n1):
+        if arr[i]==n:
+            count+=1
+        i+=1
+    return count
+print(accrr(n,arr,n1))
