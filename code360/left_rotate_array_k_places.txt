@@ -11,3 +11,43 @@ def rotateArray(arr: list, k: int) -> list:
         arr[j]=temp[j-(n-k)]
     return arr
     pass
+
+
+
+0r
+
+
+
+#left rotate and right rotate an array for k positions
+
+a=[1,2,3,4,5,6]
+
+def fun1(arr,low,high):
+    while low<high:
+        arr[low],arr[high]=arr[high],arr[low]
+        low+=1
+        high-=1
+    return arr
+
+#left shift
+# def rev(arr):
+#     k=4
+#
+#     n=len(arr)
+#     k = k % n
+#     fun1(arr,0,k-1)
+#     fun1(arr,k,n-1)
+#     fun1(arr,0,n-1)
+#     return arr
+# print(rev(a))
+
+#right shift
+def rev(arr):
+    k=int(input())
+    n=len(arr)
+    k=k%n
+    fun1(arr,(n-k),n-1)
+    fun1(arr,0,(n-k)-1)
+    fun1(arr,0,n-1)
+    return arr
+print(rev(a))
