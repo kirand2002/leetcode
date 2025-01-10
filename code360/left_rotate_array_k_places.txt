@@ -1,0 +1,13 @@
+def rotateArray(arr: list, k: int) -> list:
+    n=len(arr)
+    k=k%n
+    temp=[]
+    for i in range(k):
+        temp.append(arr[i])
+    for i in range(k,n):
+        arr[i-k]=arr[i]
+
+    for j in range(n-k,n):
+        arr[j]=temp[j-(n-k)]
+    return arr
+    pass
