@@ -1,0 +1,49 @@
+
+def sortedArray(a: [int], b: [int]) -> [int]:
+    i=0
+    j=0
+    union=[]
+    n1=len(a)
+    n2=len(b)
+    while i<n1 and j<n2:
+        if a[i]<=b[j]:
+            if len(union)==0 or a[i]!=union[-1]:
+                union.append(a[i])
+            i+=1
+
+        else:
+            
+                if len(union)==0 or b[j]!=union[-1]:
+                    union.append(b[j])
+                j+=1
+    while i<n1:
+        
+            if len(union)==0 or a[i]!=union[-1]:
+                union.append(a[i])
+            i+=1
+    while j<n2:
+      
+            if len(union)==0 or b[j]!=union[-1]:
+                union.append(b[j])
+            j+=1
+    return union
+
+
+
+
+    pass
+
+0r
+
+
+def sortedArray(a: [int], b: [int]) -> [int]:
+    c=set()
+    for i in range(len(a)):
+        c.add(a[i])
+    for i in range(len(b)):
+        c.add(b[i])
+    d=list(c)
+    d.sort()
+    return d
+    pass
+
