@@ -1,0 +1,45 @@
+def findArrayIntersection(arr: list, n: int, brr: list, m: int):
+    vis=[]
+    ans=[]
+    for i in range(m):
+        vis.append(0)
+    for i in range(n):
+        for j in range(m):
+            if arr[i]==brr[j] and vis[j]==0:
+                ans.append(arr[i])
+                vis[j]=1
+                break
+            if brr[j]>arr[i]:
+                break
+    return ans
+
+
+    pass
+
+
+or
+
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def findArrayIntersection(arr: list, n: int, brr: list, m: int):
+    i=0
+    j=0
+    ans=[]
+    while i<n and j<m:
+        if arr[i]<brr[j]:
+            i+=1
+        elif brr[j]<arr[i]:
+            j+=1
+        else:
+            ans.append(arr[i])
+            j+=1
+            i+=1
+    return ans
+
+
+    pass
+
