@@ -1,0 +1,74 @@
+from typing import *
+
+def missingNumber(a : List[int], N : int) -> int:
+    
+    for i in range(1,N+1):
+        flag=0
+        for j in range(N-1):
+            if a[j]==i :
+                flag=1
+                break
+        if flag==0:
+            return i
+        
+
+
+or
+
+
+
+
+def missingNumber(a : List[int], N : int) -> int:
+    hash=[]
+    for i in range(N+1):
+        hash.append(0)
+    for i in range(len(a)):
+        hash[a[i]]=1
+    for i in range(1,len(hash)):
+        if hash[i]==0:
+            return i
+
+or
+
+
+from typing import *
+
+def missingNumber(a : List[int], N : int) -> int:
+    sum=N*(N+1)//2
+    s2=0
+    for i in range(len(a)):
+        s2=a[i]+s2
+    return sum-s2
+    pass
+
+
+or
+
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        xor1=0
+        xor2=0
+        n=len(nums)
+        for i in range(n):
+            xor2=xor2^nums[i]
+            xor1=xor1^(i+1)
+        return xor1^xor2
+
+or
+
+
+from typing import *
+
+def missingNumber(a : List[int], N : int) -> int:
+    dict={}
+    for i in range(N+1):
+        dict[i]=0
+    for i in a:
+        dict[i]=1
+    for i in range(1,len(dict)):
+        if dict[i]==0:
+            return i
+
+
+
