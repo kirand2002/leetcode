@@ -55,5 +55,19 @@ class Solution:
             xor1=xor1^(i+1)
         return xor1^xor2
 
+or
+
+
+from typing import *
+
+def missingNumber(a : List[int], N : int) -> int:
+    dict={}
+    for i in range(N+1):
+        dict[i]=0
+    for i in a:
+        dict[i]=1
+    for i in range(1,len(dict)):
+        if dict[i]==0:
+            return i
 
 
