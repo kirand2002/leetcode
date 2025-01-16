@@ -1,0 +1,9 @@
+def list(l):
+    while True:
+        try:
+            m=int(input("enter the num"))
+            l.append(m)
+        except Exception as e:
+            return l
+l=[]
+print(list(l))
