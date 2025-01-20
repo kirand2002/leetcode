@@ -47,4 +47,13 @@ class Solution:
        
 -------------------------------------------------------------
 
-
+class Solution:
+    def armstrongNumber (self, n):
+        pow=3
+        temp=n
+        sum=0
+        while temp!=0:
+            rem=temp%10
+            sum=sum+(rem**pow)
+            temp=temp//10
+        return n==sum
