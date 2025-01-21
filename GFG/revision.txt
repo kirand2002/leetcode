@@ -122,3 +122,25 @@ class Solution:
             return
         print(n,end=' ')
         return self.printNos(n-1)
+
+------------------------------------------------------------------------
+class Solution:
+    def sumOfSeries(self,n):
+        #code here
+        if n==1:
+            return 1
+        return n**3+self.sumOfSeries(n-1)
+
+
+------------------------------------------------------------------------
+
+class Solution:
+    def factorialNumbers(self, n):
+        l=[]
+        fact=1
+        i=1
+        while fact<=n:
+            l.append(fact)
+            i+=1
+            fact*=i
+        return l
