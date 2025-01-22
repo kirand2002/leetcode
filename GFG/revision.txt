@@ -179,3 +179,17 @@ class Solution:
                 a=b
                 b=c
             return c
+
+------------------------------------------------------------------------
+class Solution:
+    # Function to count the frequency of all elements from 1 to N in the array.
+    def frequencyCount(self, arr):
+        hash=[]
+        for i in range(len(arr)+1):
+            hash.append(0)
+        for i in range(len(arr)):
+            hash[arr[i]]+=1
+        return hash[1:]
+
+--------------------------------------------------------------------------------
+                
