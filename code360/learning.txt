@@ -1,0 +1,46 @@
+franhiet to celcius
+----------------------
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+#Your code goes here
+S=int(input())
+E=int(input())
+W=int(input())
+
+for i in range(S,E,W):
+    cel=(i-32)*(5/9)
+    if cel<0:
+        print(i,int(cel))
+    else:
+        print(i,int(cel))
+
+
+---------------------------------------------------------------------
+
+Write a program to input an integer N and print the sum of all its even digits and all its odd digits separately.
+
+Digits mean numbers, not the places! If the given integer is "13245", the even digits are 2 and 4, and the odd digits are 1, 3, and 5.
+
+
+
+#Your code goes here
+n=int(input())
+even=0
+odd=0
+while n!=0:
+    i=n%10
+    if i%2==0:
+        even+=i
+    else:
+        odd+=i
+    n=n//10
+print(even,odd)
+
+
+-------------------------------------------------------------------------------------------
+
+
