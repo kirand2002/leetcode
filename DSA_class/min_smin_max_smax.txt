@@ -1,0 +1,32 @@
+#wap for largest and slargest and smallest and ssmallest with index in list
+
+# largest=-10**9
+# slargest=-10**9
+# larindex=-1
+# slarindex=-1
+# smallest=10**9
+# ssmallest=10**9
+# smallidx=-1
+# ssmallindx=-1
+# for i in range(len(l)):
+#     if l[i]>largest:
+#         slargest=largest
+#         slarindex=larindex
+#         largest=l[i]
+#         larindex=i
+#     elif l[i]!=largest and l[i]>slargest:
+#         slargest=l[i]
+#         slarindex=i
+#     if l[i]<smallest:
+#         ssmallest=smallest
+#         ssmallindx=smallidx
+#         smallest=l[i]
+#         smallidx=i
+#     elif l[i]<ssmallest and l[i]!=smallest:
+#         ssmallest=l[i]
+#         ssmallindx=i
+# print("max:",largest,larindex)
+# print("smax:",slargest,slarindex)
+# print("min:",smallest,smallidx)
+# print("smin:",ssmallest,ssmallindx)
+
