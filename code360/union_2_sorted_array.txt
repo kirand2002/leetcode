@@ -47,3 +47,14 @@ def sortedArray(a: [int], b: [int]) -> [int]:
     return d
     pass
 
+0r
+
+
+def findUnion(self,a,b):
+        # code here
+        union=a+b
+        union=set(union)
+        
+        
+        return list(sorted(union))
+
