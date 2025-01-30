@@ -1,0 +1,11 @@
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        res=[]
+        
+        for i in range(len(candies)):
+            sum=candies[i]+extraCandies
+            
+            res.append(sum>=max(candies))
+            sum=0
+        return res
+        
