@@ -13,3 +13,21 @@ def bubbleSort(arr,n):
                 arr[j+1]=temp
     return arr
     pass
+
+
+ def buble(l):
+#     for i in range(len(l)-1):
+#         for j in range(len(l)-1-i):
+#             if l[j]>l[j+1]:
+#                 l[j],l[j+1]=l[j+1],l[j]
+#     return l
+# print(buble(l1))
+#
+#
+# def bubledes(l):
+#     for i in range(len(l)-1):
+#         for j in range(len(l)-1-i):
+#             if l[j]<l[j+1]:
+#                 l[j],l[j+1]=l[j+1],l[j]
+#     return l
+# print(bubledes(l1))

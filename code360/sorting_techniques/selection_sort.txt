@@ -14,3 +14,53 @@ def selectionSort(arr,n):
         arr[i]=temp
     return arr
     pass
+
+
+def selection(l1):
+
+    for i in range(len(l1)-1):
+        min=i
+
+        for j in range(i+1,len(l1)):
+            if l1[min]>l1[j]:
+                min=j
+        l1[i],l1[min]=l1[min],l1[i]
+    return l1
+print(selection(l1))
+#desecending----------------------
+
+def selection(l1):
+
+    for i in range(len(l1)-1):
+        min=i
+
+        for j in range(i+1,len(l1)):
+            if l1[min]<l1[j]:
+                min=j
+        l1[i],l1[min]=l1[min],l1[i]
+    return l1
+print(selection(l1))
+def selection(l1):
+
+    for i in range(len(l1)-1):
+        min=i
+
+        for j in range(i+1,len(l1)):
+            if l1[min]>l1[j]:
+                min=j
+        l1[i],l1[min]=l1[min],l1[i]
+    return l1
+print(selection(l1))
+#desecending----------------------
+
+def selection(l1):
+
+    for i in range(len(l1)-1):
+        min=i
+
+        for j in range(i+1,len(l1)):
+            if l1[min]<l1[j]:
+                min=j
+        l1[i],l1[min]=l1[min],l1[i]
+    return l1
+print(selection(l1))
