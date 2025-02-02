@@ -64,3 +64,17 @@ def selection(l1):
         l1[i],l1[min]=l1[min],l1[i]
     return l1
 print(selection(l1))
+
+
+--------------------------------------------------------
+def Selection_sort(arr):    
+	for i in range(len(arr)-1):
+        	actual_idx = len(arr) - i - 1        
+		max_idx = -1
+        	max = -10 ** 5
+        	for j in range(len(arr)-i):            
+			if max < arr[j]:
+                		max = arr[j]                
+				max_idx = j
+        	arr[actual_idx], arr[max_idx] = arr[max_idx], arr[actual_idx]    
+	return arr

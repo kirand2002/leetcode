@@ -6,3 +6,38 @@ class Solution:
                 if nums[i] + nums[j]==target:
                     return [i,j]
         return []
+
+
+def read(n: int, book: [int], target: int) -> str:
+    # Write your code here.
+    # sum=0
+    # for i in range(len(book)-1):
+    #     for j in range(i,len(book)):
+    #         sum=book[i]+book[j]
+    #         if sum==target:
+    #             return "YES"
+    # return "NO" 
+    # dict={}
+    # for i in range(n):
+    #     if dict.get(book[i])==None:
+    #         dict[book[i]]=i
+    # for i,j in dict.items():
+    #     sum=target-i
+    #     if dict.get(sum)!=None:
+    #         return "YES"
+    # return "NO"
+    i=0
+    j=n-1
+    book=sorted(book)
+    while i<j:
+        sum=book[i]+book[j]
+        if sum<target:
+            i+=1
+        elif sum==target:
+            return "YES"
+        else:
+            j-=1
+        sum=0
+    return"NO"
+        
+    pass
