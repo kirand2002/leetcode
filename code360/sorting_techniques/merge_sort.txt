@@ -39,3 +39,39 @@ arr = [38, 27, 43, 3, 9, 82, 10]
 sorted_arr = merge_sort(arr)
 print("Sorted array:", sorted_arr)
 
+
+-------------------------------------------------------------------------
+
+def merge(arr,start,mid,end):
+#     i=start
+#     j=mid+1
+#     res=[]
+#     while i<=mid and j<=end:
+#         if arr[i]<arr[j]:
+#             res.append(arr[i])
+#             i+=1
+#         else:
+#             res.append(arr[j])
+#             j+=1
+#
+#     while i<=mid:
+#         res.append(arr[i])
+#         i+=1
+#     while j<=end:
+#         res.append(arr[j])
+#         j+=1
+#     i=start
+#     for k in range(0,len(res)):
+#         arr[i]=res[k]
+#         i+=1
+#
+# def mergesort(arr,start,end):
+#
+#     if start==end:
+#         return
+#     mid = (start + end) // 2
+#     mergesort(arr,start,mid)
+#     mergesort(arr,mid+1,end)
+#     merge(arr,start,mid,end)
+# mergesort(l1,0,len(l1)-1)
+# print(l1)
