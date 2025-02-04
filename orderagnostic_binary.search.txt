@@ -1,0 +1,29 @@
+def orderagonastic(l,tar):
+    start=0
+    end=len(l1)-1
+    flag=True
+    if l1[start]>l1[end]:
+        flag=False
+    while start <= end:
+        mid=(start+end)//2
+        if tar==l[mid]:
+            return mid
+        if flag:
+            if tar < l[mid]:
+                end = mid - 1
+            elif tar > l[mid]:
+                start = mid + 1
+        else:
+            if tar>l[mid]:
+                end=mid-1
+            elif tar<l[mid]:
+                start=mid+1
+
+
+    return -1
+# target=int(input("enter the target:"))
+# print(binarydes(l1,target))
+
+#-----
+target=int(input("enter target"))
+print(orderagonastic(l1,target))

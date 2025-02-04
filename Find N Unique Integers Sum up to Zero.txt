@@ -25,4 +25,16 @@ class Solution:
                 sum -= 1
         return l
 
+or-------------------
+
+l=[0]*n
+        sum=0
+        for i in range(n-1):
+            l[i]=i+1
+            sum+=l[i]
+        l[n-1]=sum*-1
+        return l 
+
+        
+
         
