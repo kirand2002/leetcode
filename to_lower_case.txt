@@ -1,0 +1,10 @@
+class Solution:
+    def toLowerCase(self, s: str) -> str:
+        nstr=""
+        for i in range(len(s)):
+            if "A"<=s[i]<="Z":
+                nstr=nstr+chr(ord(s[i])+32)
+            else:
+                nstr=nstr+s[i]
+        return nstr
+        
