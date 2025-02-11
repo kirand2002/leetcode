@@ -1,0 +1,42 @@
+def majorityElement(v: [int]) -> int:
+    # Write your code here
+    # for i in range(len(v)):
+    #     count=0
+    #     for j in range(len(v)):
+    #         if v[i]==v[j]:
+    #             count+=1
+    #     if count>(len(v)//2):
+    #         return v[i]
+
+
+    # dict={}
+    # for i in range(len(v)):
+    #     if dict.get(v[i])==None:
+    #         dict[v[i]]=1
+    #     else:
+    #         dict[v[i]]+=1
+    # for keys,values in dict.items():
+    #     if values>(len(v)//2):
+    #         return keys
+
+    count=0
+    el=0
+    for i in range(len(v)):
+        if count==0:
+            count=1
+            el=v[i]
+        else:
+            if v[i]==el:
+                count+=1
+            else:
+                count-=1
+    count1=0
+    for i in range(len(v)):
+        if el==v[i]:
+            count+=1
+    if count>(len(v)//2):
+        return el
+    return -1
+
+
+    pass
