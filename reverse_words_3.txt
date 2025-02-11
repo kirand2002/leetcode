@@ -1,0 +1,18 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        nword=""
+        nsen=""
+        i=0
+        s=s+" "
+        while i<len(s):
+            if s[i]!=" ":
+                nword=s[i]+nword
+            elif nword!="":
+                if nsen=="":
+                    nsen=nsen+nword
+                    nword=""
+                else:
+                    nsen=nsen+" "+nword
+                    nword=""
+            i+=1
+        return nsen
