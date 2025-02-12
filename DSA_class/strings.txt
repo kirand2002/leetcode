@@ -107,3 +107,133 @@ if ref:
 else:
     print("it is not palindrome")
 
+# WAP to print the longest palindrome in a given sentence along withit'slength.
+# def filter(str):
+#     nstr=""
+#     for i in range(len(str)):
+#         if "A"<=str[i]<="Z":
+#             nstr=nstr+chr(ord(str[i])+32)
+#         elif "a"<=str[i]<="z":
+#             nstr=nstr+str[i]
+#         elif "0"<=str[i]<="9":
+#             nstr=nstr+str[i]
+#     return nstr
+# def palindrome(str):
+#     s1=filter(str)
+#     i=0
+#     j=len(s1)-1
+#     while i<=j:
+#         if s1[i]!=s1[j]:
+#             return False
+#         i+=1
+#         j-=1
+#     return True
+# def sen(str):
+#     str = str + " "
+#     s3 = ""
+#     max1 = -10 ** 5
+#     nword = ""
+#     for i in range(len(str)):
+#
+#         if str[i]!=" ":
+#             nword=nword+str[i]
+#
+#         elif nword!="":
+#             s1=palindrome(nword)
+#
+#             if s1:
+#
+#                 if max1<len(nword):
+#                     s3=nword
+#                     max1=len(nword)
+#             nword=""
+#     return s3,max1
+# str=input("enter the string")
+# print(sen(str))
+#
+
+
+#WAP to print the shortest palindrome in a given sentence along withit'slength.
+# def filter(str):
+#     nword=""
+#     for i in range(len(str)):
+#         if "A"<=str[i]<="Z":
+#             nword=nword+chr(ord(str[i])+32)
+#         elif "a"<=str[i]<="z":
+#             nword=nword+str[i]
+#         elif "0"<=str[i]<="9":
+#             nword=nword+str[i]
+#     return nword
+# def palindrome(str):
+#     s1=filter(str)
+#     i=0
+#     j=len(s1)-1
+#     while i<=j:
+#         if s1[i]!=s1[j]:
+#             return False
+#         i+=1
+#         j-=1
+#     return True
+# def sen(str):
+#     nword=""
+#     max1=10**9
+#     word=""
+#     str=str+" "
+#     for i in range(len(str)):
+#         if str[i]!=" ":
+#             nword=nword+str[i]
+#         elif nword!="":
+#             s1=palindrome(nword)
+#             if s1:
+#                 if max1>len(nword):
+#                     max1=len(nword)
+#                     word=nword
+#             nword=""
+#     return word,max1
+# str=input()
+# print(sen(str))
+
+
+#WAP to print the largest count of continuous palindromic words inagivensentence
+def filter(str):
+    nword=""
+    for i in range(len(str)):
+        if "A"<=str[i]<="Z":
+            nword=nword+chr(ord(str[i])+32)
+        elif "a"<=str[i]<="z":
+            nword=nword+str[i]
+        elif "0"<=str[i]<="9":
+            nword=nword+str[i]
+    return nword
+def palindrome(str):
+    s=filter(str)
+    i=0
+    j=len(s)-1
+    while i<=j:
+        if s[i]!=s[j]:
+            return False
+        i+=1
+        j-=1
+    return True
+def sen(str):
+    nword=""
+    count=0
+    str=str+" "
+    for i in range(len(str)):
+        if str[i]!=" ":
+            nword=nword+str[i]
+        elif nword!="":
+            s1=palindrome(nword)
+            if s1:
+                count+=1
+            nword=""
+    return count
+str=input()
+print(sen(str))
+
+
+
+
+
+
+

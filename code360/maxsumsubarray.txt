@@ -1,0 +1,70 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from sys import stdin,setrecursionlimit
+setrecursionlimit(10**7)
+
+def maxSubarraySum(arr, n) :
+
+    # max1=-10**9
+    # for i in range(n):
+    #     for j in range(i,n+1):
+    #         sum=0
+    #         for k in range(i,j):
+    #             sum+=arr[k]
+    #             max1=max(sum,max1)
+    # if max1<0:
+    #     max1=0
+    # return max1
+
+    # max1=-10**9
+    # for i in range(n):
+    #     sum=0
+    #     for j in range(i,n):
+    #         sum+=arr[j]
+    #         max1=max(sum,max1)
+    # if max1<0:
+    #     max1=0
+    # return max1
+    sum=0
+    max1=-10**9
+    for i in range(n):
+        sum+=arr[i]
+        if sum>max1:
+            max1=sum
+        if sum<0:
+            sum=0
+    if max1<0:
+        max1=0
+    return max1
+
+to find max sum sub array
+
+    sum=0
+    max1=-10**9
+    mystart=-1
+    myend=-1
+    for i in range(n):
+        if sum==0:
+	    start=i
+        sum+=arr[i]
+        if sum>max1:
+            max1=sum
+	    mystart=start
+	    myend=i
+        if sum<0:
+            sum=0
+    if max1<0:
+        max1=0
+    return max1
+
+
+
+
+
+
+
+
+
