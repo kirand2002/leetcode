@@ -1,0 +1,54 @@
+from typing import *
+
+def alternateNumbers(a : List[int]) -> List[int]:
+    # pos=[]
+    # neg=[]
+    # for i in range(len(a)):
+    #     if a[i]>0:
+    #        pos.append(a[i])
+    #     else:
+    #         neg.append(a[i])
+    # for i in range((len(a)//2)):
+    #     a[2*i]=pos[i]
+    #     a[2*i+1]=neg[i]
+    # return a
+
+    # ans=[0]*len(a)
+    # pos=0
+    # neg=1
+    # for i in range(len(a)):
+    #     if a[i]<0:
+    #         ans[neg]=a[i]
+    #         neg+=2
+    #     else:
+    #         ans[pos]=a[i]
+    #         pos+=2
+    # return ans
+
+    neg=[]
+    pos=[]
+    for i in range(len(a)):
+        if a[i]<0:
+            neg.append(a[i])
+        else:
+            pos.append(a[i])
+    for i in range(len(neg)):
+
+                a[2*i]=pos[i]            
+                a[2*i+1]=neg[i]
+    if len(pos)>len(neg):
+        
+        index=len(neg)*2
+        for i in range(index,len(pos)):
+            a[index]=pos[i]
+            index+=1
+    elif len(neg)>len(pos):
+
+        
+        index=len(pos)*2
+        for i in range(index,len(neg)):
+            a[index]=neg[i]
+            index+=1
+    return a
+            
+    pass
