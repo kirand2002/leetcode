@@ -1,0 +1,42 @@
+index_col,main_col,feature1,feature2,feature3,feature4
+1,500,10,0.5,200,30
+2,450,15,0.8,180,25
+3,600,12,0.3,220,40
+4,550,20,0.6,210,35
+5,520,18,0.9,190,28
+6,610,14,0.4,230,45
+7,480,16,0.7,170,20
+8,530,19,0.2,200,38
+9,490,11,0.5,160,27
+10,570,13,0.6,240,33
+
+
+📊 1. Feature Importance Bar Chart
+What It Explains
+This graph shows which features (columns) are most important for predicting the target variable (main_col).
+It is generated using a Decision Tree Regressor, which assigns an importance score to each feature.
+Higher bars mean those features have a stronger impact on the target variable.
+How to Interpret
+Features with higher importance should be prioritized for further analysis.
+Low-importance features may not significantly affect customer segmentation.
+Helps businesses understand which factors drive customer behavior.
+Example
+If income and spending_score are highly important, then:
+
+Customers with higher income tend to have a specific spending behavior.
+Businesses can target ads and promotions based on these factors.
+📈 2. Customer Segmentation Scatter Plot
+What It Explains
+This plot visualizes customer clusters formed by KMeans clustering.
+Customers are grouped based on their similarities in feature values.
+Each colored cluster represents a different customer segment.
+How to Interpret
+Tightly grouped clusters → Customers with similar behaviors.
+Well-separated clusters → Distinct customer groups exist.
+Overlapping clusters → Features may not effectively separate customers.
+Example
+If the clusters are based on income vs. spending score:
+
+One cluster might represent low-income but high-spending customers.
+Another cluster might represent high-income but low-spending customers.
+Businesses can use this info to tailor marketing campaigns for each group.

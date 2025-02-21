@@ -1,0 +1,11 @@
+class Solution:
+    def leaders(self, arr):
+        ans=[]
+        max1=-10**5
+        for i in range(len(arr)-1,-1,-1):
+            if arr[i]>=max1:
+                ans.append(arr[i])
+            max1=max(arr[i],max1)
+        return reversed(ans)
+            
+        # code here
